@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/style.css" />
+    <link rel="stylesheet" href="src/styles/naves.css">
     <title>Star Wars Wiki</title>
   </head>
   <body>
     <div class="wrapper">
-      <nav id="navbar">
+      <nav>
         <a href="index.html">
           <img
             class="logo"
@@ -44,28 +45,11 @@
       <header>
         <h1>Star Wars Wiki</h1>
         <img src="src/assets/img/starwars-hero.jpg" alt="header" />
+        <h1 class="title-movies">Naves</h1>
       </header>
 
-      <div class="main-container">
-        <main>
-          <h2>¿Necesitas Información Sobre Star Wars?</h2>
-          <p>Esta es tu pagina</p>
-          <a href="#navbar" class="nav-back">Buscar</a>
-        </main>
-        <aside>
-          <img src="src/assets/img/aside-index.jpg" alt="aside image" />
-        </aside>
-      </div>
-
-      <div class="sub-main-container">
-        <aside>
-          <img src="src/assets/img/aside-index-2.jpg" alt="aside image" />
-        </aside>
-        <main>
-          <h2>Conoce las mejores peliculas</h2>
-          <p>Da click aqui:</p>
-          <a href="peliculas.html" class="nav-back">Peliculas</a>
-        </main>
+      <div class="main-wrapper">
+        <main class="main-naves"></main>
       </div>
       <footer>
         <img
@@ -79,5 +63,10 @@
         </div>
       </footer>
     </div>
+    <script src="src/js/naves.js"></script>
+
+    <script>
+      module.consulta();
+    </script>
   </body>
 </html>

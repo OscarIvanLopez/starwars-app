@@ -1,4 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sf-distant-galaxy");
+
 * {
   margin: 0;
   padding: 0;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@keyframes hoverLi {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-2px);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: #040001;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: transitionIn 1s;
+}
+
+.wrapper nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 2rem;
+  animation: transitionIn 1s;
+}
+
+nav {
+  padding: 0 1rem;
+}
+
+nav img {
+  width: 10rem;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 0 1rem;
+}
+
+nav ul li:hover {
+  animation: hoverLi 1s;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+/* Header styles */
+header h1 {
+  color: white;
+  text-align: center;
+  font-family: "SF Distant Galaxy", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+header img {
+  width: 100%;
+}
+
+/* Main styles */
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "SF Distant Galaxy", sans-serif;
+  letter-spacing: 5px;
+}
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main a {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  width: auto;
+  margin-top: 2rem;
+}
+
+.sub-main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Aside styles */
+aside img {
+  width: 100%;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+
+footer .logo-footer {
+  width: 40%;
+}
+
+.left-side-footer {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  width: 60%;
+}
+
+/* Desktop size */
+@media (min-width: 1200px) {
+  main h2 {
+    font-size: 4rem;
+  }
+  main p {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet size */
+@media (max-width: 768px) {
+  .wrapper nav {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .wrapper nav ul {
+    flex-wrap: wrap;
+  }
+  .wrapper nav ul li {
+    padding: 0.5rem 1rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub-main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile size */
+@media (max-width: 480px) {
+  .wrapper nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .wrapper nav ul li {
+    padding: 0.5rem 0;
+  }
+  main a {
+    font-size: 1rem;
+  }
 }

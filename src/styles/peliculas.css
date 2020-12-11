@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+main div img {
+  width: 50%;
+}
+
+main div p {
+  color: black;
+}
+
+.title-movies{
+    margin-bottom: 2rem;
+}
+
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-paliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.main-paliculas .pelicula {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.poster{
+    padding: 1rem 0;
+}
+
+.description{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .main-paliculas{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}

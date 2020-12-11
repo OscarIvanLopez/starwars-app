@@ -1,0 +1,60 @@
+.main-devs {
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+}
+
+.main-devs h1 {
+    margin: 4rem 0;
+    font-size: 4rem;
+}
+
+.developers-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0 3rem;
+}
+
+.profile img {
+    width: 10rem;
+    border-radius: 10rem;
+    /* border: 1rem white solid; */
+}
+
+.profile{
+    margin: 0 3rem;
+}
+
+.profile p {
+    margin: 1rem 0;
+}
+
+.title-devs{
+    margin-bottom: 4rem;
+}
+
+
+
+@media (max-width: 860px) {
+    .developers-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+
+    .main-devs h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .developers-section{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
